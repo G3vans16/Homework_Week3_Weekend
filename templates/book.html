@@ -1,0 +1,22 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <title>{{ title }} - Library</title>
+</head>
+
+<body>
+  <ul>
+    <li clas="nav-link"><a href="/books">Home</a></li>
+  </ul>
+  <hr>
+  <h1>Library</h1>
+
+  <div class="book">
+    <h4>Title: {{ book.title }}</h4>
+    <h5>Author: {{ book.author }}</h5>
+    <h5>Genre: {{ book.genre }}</h5>
+
+</body>
+
+</html>

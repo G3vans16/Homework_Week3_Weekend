@@ -15,9 +15,12 @@
 <div class="books">
   {% for book in books %}
   <div class="book">
-    <h4>Title: {{ book.title }}</h4>
+    <!-- <h4>Title: {{ book.title }}</h4>
     <h5>Author: {{ book.author }}</h5>
-    <h5>Genre: {{ book.genre }}</h5>
+    <h5>Genre: {{ book.genre }}</h5> -->
+
+    <h4><a href= http://localhost:4999/books/{{loop.index0}}>{{ book.title }}</a></h4>
+
 
     <form class="form-inline" action="/books/delete/{{ loop.index0 }}" method="POST">
       <input type="submit" value="Delete">

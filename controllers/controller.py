@@ -7,6 +7,10 @@ from models.book import *
 def index():
     return render_template('index.html', title='Home', books=books)
 
+@app.route('/books/<index>', methods= ['GET'])
+def book(index):
+    return render_template('book.html', title="Book", book=books[int(index)])
+
 @app.route('/books', methods=['POST'])
 def add_book():
   title = request.form['title']
