@@ -19,7 +19,14 @@
     <h5>Author: {{ book.author }}</h5>
     <h5>Genre: {{ book.genre }}</h5> -->
 
-    <h4><a href= http://localhost:4999/books/{{loop.index0}}>{{ book.title }}</a></h4>
+    <h4>
+      <a href= http://localhost:4999/books/{{loop.index0}}>{{ book.title }}</a>
+      {% if book.checked_out %}
+      <p><i>Not Available - Checked Out</i></p>
+      {% else %}
+      <p><i>Available</i></p>
+      {% endif %}
+    </h4>
 
 
     <form class="form-inline" action="/books/delete/{{ loop.index0 }}" method="POST">

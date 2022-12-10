@@ -1,8 +1,8 @@
 from models.book import *
 
-book1 = Book("To Kill a Mockingbird", "Harper Lee", "Southern Gothic Fiction")
-book2 = Book("Dracula", "Bram Stoker", "Horror")
-book3 = Book("1984", "George Orwell", "Dystopian")
+book1 = Book("To Kill a Mockingbird", "Harper Lee", "Southern Gothic Fiction", True)
+book2 = Book("Dracula", "Bram Stoker", "Horror", False)
+book3 = Book("1984", "George Orwell", "Dystopian", False)
 
 books = [book1, book2, book3]
 
